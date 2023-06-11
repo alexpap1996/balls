@@ -1,7 +1,7 @@
 const ua = navigator.userAgent;
 let isMobile = false
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
-  isMobile = true
+  isMobile = false
 }
 
 const canvas = document.querySelector('canvas')
@@ -182,7 +182,7 @@ const selectChangeHandler = (event) => {
   })
 }
 
-window.addEventListener(isMobile ? 'touchstart' : 'mousemove', (event) => {
+window.addEventListener('mousemove', (event) => {
   let x, y
   if (isMobile) {
     const touchobj = event.changedTouches[0];
@@ -199,7 +199,7 @@ window.addEventListener(isMobile ? 'touchstart' : 'mousemove', (event) => {
   mouse.y = y
 })
 
-window.addEventListener(isMobile ? 'touchend' : 'click', (event) => {
+window.addEventListener('click', (event) => {
   for (let circle of circleArr) {
     circle.destroy()
   }
