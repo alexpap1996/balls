@@ -1,3 +1,9 @@
+const ua = navigator.userAgent;
+let isMobile = false
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
+  isMobile = true
+}
+
 const canvas = document.querySelector('canvas')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
@@ -83,7 +89,7 @@ const possibleColors5 = [
 ]
 
 const colorPalettes = [possibleColors1, possibleColors2, possibleColors3, possibleColors4, possibleColors5]
-const mouseDist = 70
+const mouseDist = isMobile ? 1000 : 70
 class Circle {
   x = 1
   y = 1
@@ -176,13 +182,13 @@ const selectChangeHandler = (event) => {
   })
 }
 
-window.addEventListener('mousemove', (event) => {
+window.addEventListener(isMobile ? 'touchstart' : 'mousemove', (event) => {
   const { clientX, clientY } = event
   mouse.x = clientX
   mouse.y = clientY
 })
 
-window.addEventListener('click', (event) => {
+window.addEventListener(isMobile ? 'touchend' : 'click', (event) => {
   for (let circle of circleArr) {
     circle.destroy()
   }
