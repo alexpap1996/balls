@@ -1,0 +1,183 @@
+canvas {
+  border: 1px solid black;
+}
+body {
+  margin: 0;
+}
+#parent {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.background-white-block {
+  position: absolute;
+  width: 15rem;
+  background: white;
+  height: 5rem;
+}
+
+.select .fake-select {
+  padding-right: 2.5em;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  max-width: 100%;
+  outline: 0;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+  border: #dbdbdb solid 1px;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  height: 3.5rem;
+  width: 12rem;
+  padding: 1rem;
+  background: linear-gradient(to right,
+    #FF5F5D 0%,
+    #FF5F5D 20%,
+    #3F7C85 20%,
+    #3F7C85 40%,
+    #00CCBF 40%,
+    #00CCBF 60%,
+    #72F2EB 60%,
+    #72F2EB 80%,
+    #747E7E 80%
+  );
+}
+
+.select .fake-select:hover { 
+  border-color: #b5b5b5;
+}
+
+.fake-select-wrapper {
+  background: white;
+}
+.fake-select-dropdown {
+  background-color: white;
+  border: #dbdbdb solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: calc(100% - 3rem);
+}
+
+.select.is-large {
+  font-size:1.4rem;
+}
+
+.fake-select-dropdown:hover {
+
+  border: #b5b5b5 solid 1px;
+}
+
+.modal-card-body {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.fake-option-wrapper {
+  padding: 2px;
+}
+
+.fake-option {
+  width: 100%;
+  height: 2.5rem;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.fake-option:hover {
+  border-color: #b5b5b5;
+}
+
+.fake-option:not(:last-child) { margin-bottom: 0.5rem;}
+
+.fake-option-1 {
+  background: linear-gradient(to right,
+    #FF5F5D 0%,
+    #FF5F5D 20%,
+    #3F7C85 20%,
+    #3F7C85 40%,
+    #00CCBF 40%,
+    #00CCBF 60%,
+    #72F2EB 60%,
+    #72F2EB 80%,
+    #747E7E 80%
+  );
+}
+
+.fake-option-2 {
+  background: linear-gradient(to right,
+    #662400 0%,
+    #662400 20%,
+    #FF6B1A 20%,
+    #FF6B1A 40%,
+    #B33F00 40%,
+    #B33F00 60%,
+    #006663 60%,
+    #006663 80%,
+    #00B3AD 80%
+  );
+}
+.fake-option-3 {
+  background: linear-gradient(to right,
+    #5b4e07 0%,
+    #5b4e07 20%,
+    #978839 20%,
+    #978839 40%,
+    #c6b34e 40%,
+    #c6b34e 60%,
+    #f3e6a1 60%,
+    #f3e6a1 80%,
+    #36373e 80%
+  );
+}
+
+.fake-option-4 {
+  background: linear-gradient(to right,
+    #22A699 0%,
+    #22A699 25%,
+    #F2BE22 25%,
+    #F2BE22 50%,
+    #F29727 50%,
+    #F29727 75%,
+    #F24C3D 75%
+  );
+}
+
+.fake-option-4 {
+  background: linear-gradient(to right,
+    #22A699 0%,
+    #22A699 25%,
+    #F2BE22 25%,
+    #F2BE22 50%,
+    #F29727 50%,
+    #F29727 75%,
+    #F24C3D 75%
+  );
+}
+
+.fake-option-5 {
+  background: linear-gradient(to right,
+    #FF78C4 0%,
+    #FF78C4 25%,
+    #E1AEFF 25%,
+    #E1AEFF 50%,
+    #FFBDF7 50%,
+    #FFBDF7 75%,
+    #FFECEC 75%
+  );
+}
+
+  /*   '#5b4e07',
+  '#978839',
+  '#c6b34e',
+  '#f3e6a1',
+  '#36373e', */
+

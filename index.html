@@ -5,17 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="script.js" defer></script>
-  <style>
-    canvas {
-      border: 1px solid black;
-    }
-    body {
-      margin: 0
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Canvas Resize</title>
 </head>
 <body>
-  <canvas></canvas>
+  <div id="parent">
+    <canvas class="absolute"></canvas>
+    <div class="absolute" >
+      <div class="is-relative fake-select-wrapper">
+        <div class="select mt-5 ml-5 mr-5 is-large" onclick="clickFakeSelect()">
+          <div class="fake-select"></div>
+        </div>
+
+        <div class="fake-select-dropdown is-hidden ml-5">
+          <div class="fake-option-wrapper" data-value="1">
+            <div class="fake-option fake-option-1"></div>
+          </div>
+          <div class="fake-option-wrapper" data-value="2">
+            <div class="fake-option fake-option-2"></div>
+          </div>
+          <div class="fake-option-wrapper" data-value="3">
+            <div class="fake-option fake-option-3"></div>
+          </div>
+          <div class="fake-option-wrapper" data-value="4">
+            <div class="fake-option fake-option-4"></div>
+          </div>
+          <div class="fake-option-wrapper" data-value="5">
+            <div class="fake-option fake-option-5"></div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+  
+  <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+
+      <section class="modal-card-body">
+        <div class="content">
+          <h1 class="is-size-3">Οδηγιες:</h1>
+            <p>idk για την ωρα κουνατε το ποντικι, αλλαζετε τα χρωματα, και οταν κανετε κλικ εξαφανιζονται οσες μπαλιτσες ειναι κοντα</p>
+            <p>Νεες παλεττες, καλυτερη εμφανιση και ισως καποιο gameplay coming soon</p>
+
+        </div>
+      </section>
+      <footer class="modal-card-foot is-justify-content-center">
+        <button class="button" onclick="closeModal()">Okaaaaay</button>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
