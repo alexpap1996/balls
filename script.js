@@ -1,7 +1,7 @@
 const ua = navigator.userAgent;
 let isMobile = false
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)) {
-  isMobile = true
+  isMobile = false
 }
 
 const canvas = document.querySelector('canvas')
