@@ -183,9 +183,20 @@ const selectChangeHandler = (event) => {
 }
 
 window.addEventListener(isMobile ? 'touchstart' : 'mousemove', (event) => {
-  const { clientX, clientY } = event
-  mouse.x = clientX
-  mouse.y = clientY
+  let x, y
+  if (isMobile) {
+    const touchobj = event.changedTouches[0];
+    x = touchobj.x 
+    y = touchobj.y
+  }
+  else {
+    const { clientX, clientY } = event
+    x = clientX
+    y = clientY
+  }
+  
+  mouse.x = x
+  mouse.y = y
 })
 
 window.addEventListener(isMobile ? 'touchend' : 'click', (event) => {
