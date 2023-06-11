@@ -194,7 +194,7 @@ const checkGameOver = () => {
   circleArr.forEach(circle => {
     if (circle.destroyed) dest++
   })
-  if (circleArr.length * 0.9 < dest) imgOverlay.classList.remove('is-hidden')
+  if (circleArr.length * 0.84 < dest) imgOverlay.classList.remove('is-hidden')
 }
 const clickFakeSelect = () => {
   const dropdown = document.querySelector('.fake-select-dropdown')
