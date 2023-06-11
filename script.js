@@ -190,11 +190,12 @@ window.addEventListener('click', (event) => {
 })
 
 const checkGameOver = () => {
-  if (!circleArr.some(circle => !circle.destroyed)) {
-    imgOverlay.classList.remove('is-hidden')
-  }
+  let dest = 0
+  circleArr.forEach(circle => {
+    if (circle.destroyed) dest++
+  })
+  if (circleArr.length * 0.9 < dest) imgOverlay.classList.remove('is-hidden')
 }
-
 const clickFakeSelect = () => {
   const dropdown = document.querySelector('.fake-select-dropdown')
   dropdown.classList.toggle("is-hidden");
