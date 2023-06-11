@@ -1,7 +1,8 @@
 const canvas = document.querySelector('canvas')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
-
+const modal = document.querySelector('.modal')
+const imgOverlay = document.querySelector('.image-overlay')
 // canvas.width = 1
 // canvas.height = 1
 
@@ -185,7 +186,14 @@ window.addEventListener('click', (event) => {
   for (let circle of circleArr) {
     circle.destroy()
   }
+  checkGameOver()
 })
+
+const checkGameOver = () => {
+  if (!circleArr.some(circle => !circle.destroyed)) {
+    imgOverlay.classList.remove('is-hidden')
+  }
+}
 
 const clickFakeSelect = () => {
   const dropdown = document.querySelector('.fake-select-dropdown')
@@ -212,10 +220,5 @@ document.querySelectorAll('.fake-option-wrapper').forEach(optionWrapper => {
 })
 
 const closeModal = () => {
-  document.querySelector('.modal').classList.remove('is-active')
+  modal.classList.remove('is-active')
 }
-
-// // style the options
-// document.querySelectorAll('option').forEach(option => {
-//   option.background = 'linear-gradient(0deg, #fdcd3b 50%, #ffed4b 50%)'
-// })
